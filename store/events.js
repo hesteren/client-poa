@@ -1,6 +1,7 @@
 export const state = () => ({
     events: [{
       id: 1,
+      image: '',
       title: 'How to DAO',
       startDate: '',
       endDate: '',
@@ -12,6 +13,7 @@ export const state = () => ({
     },
     {
       id: 2,
+      image: '',
       title: 'How to DAO 2',
       startDate: '',
       endDate: '',
@@ -26,6 +28,9 @@ export const state = () => ({
   export const getters = {
     // getCounter(state) {
     //   return state.counter
+    // }
+    // getEventById: (state) => (id) => {
+    //   return state.events.find(event => event.id === parseInt(id))
     // }
   }
   
