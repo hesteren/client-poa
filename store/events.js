@@ -8,7 +8,7 @@ export const state = () => ({
       organisation: 'Kalipo',
       organizer: '',
       capacity: 100,
-      description: '',
+      description: 'How to DAO description',
     },
     {
       id: 2,
@@ -19,7 +19,7 @@ export const state = () => ({
       organisation: 'Kalipo',
       organizer: '',
       capacity: 100,
-      description: '',
+      description: 'How to DAO 2 description',
     }]
   })
   
