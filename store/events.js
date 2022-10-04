@@ -1,5 +1,26 @@
 export const state = () => ({
-    events: []
+    events: [{
+      id: 1,
+      title: 'How to DAO',
+      startDate: '',
+      endDate: '',
+      location: '',
+      organisation: 'Kalipo',
+      organizer: '',
+      capacity: 100,
+      description: '',
+    },
+    {
+      id: 2,
+      title: 'How to DAO 2',
+      startDate: '',
+      endDate: '',
+      location: '',
+      organisation: 'Kalipo',
+      organizer: '',
+      capacity: 100,
+      description: '',
+    }]
   })
   
   export const getters = {
