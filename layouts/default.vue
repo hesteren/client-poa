@@ -9,7 +9,7 @@
       <v-btn to="/events">Events</v-btn>
     </v-app-bar>
 
-    <v-main>
+    <v-main id="main">
       <Nuxt></Nuxt>
     </v-main>
 
@@ -22,3 +22,10 @@ export default {
   name: "DefaultLayout",
 };
 </script>
+
+<style>
+#main {
+  font-family: Century Gothic;
+
+}
+</style>

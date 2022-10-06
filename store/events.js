@@ -3,7 +3,7 @@ export const state = () => ({
       id: 1,
       image: '',
       title: 'How to DAO',
-      startDate: '',
+      startDate: '24 November 2022',
       endDate: '',
       location: 'Hogeschool Utrecht',
       organisation: 'Kalipo',
