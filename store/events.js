@@ -86,7 +86,7 @@ export const state = () => ({
 
     {
       id: 8,
-      image: 'https://static9.depositphotos.com/1037987/1188/i/450/depositphotos_11886437-stock-photo-mixed-group-in-business-meeting.jpg',
+      image: 'https://www.coindesk.com/resizer/qt_up7s1YpvWkrCYBgrBtoW5yKs=/1056x792/filters:quality(80):format(webp)/cloudfront-us-east-1.images.arcpublishing.com/coindesk/72PSYBTMM5D2VD3WI745EU6NII',
       title: 'How to DAO 8',
       startDate: '',
       endDate: '',
@@ -98,7 +98,7 @@ export const state = () => ({
     },
     {
       id: 9,
-      image: 'https://static9.depositphotos.com/1037987/1188/i/450/depositphotos_11886437-stock-photo-mixed-group-in-business-meeting.jpg',
+      image: 'https://blog.chainalysis.com/wp-content/uploads/2022/05/Web3-DAO-1170x508.png',
       title: 'How to DAO 9',
       startDate: '',
       endDate: '',
