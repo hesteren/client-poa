@@ -1,22 +1,9 @@
 <template lang="">
   <div>
     <v-container>
-      <!-- <v-flex d-flex>
-        <v-layout wrap>
-          <v-flex
-            class="md4"
-            v-for="event in this.$store.state.events.events"
-            :key="event.id"
-          >
-            <EventCard :event="event"></EventCard>
-          </v-flex>
-        </v-layout>
-      </v-flex> -->
-
       <v-row>
         <v-col
-          cols="12"
-          sm="3"
+          cols="6"
           md="4"
           v-for="event in this.$store.state.events.events"
           :key="event.id"

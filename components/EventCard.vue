@@ -1,13 +1,13 @@
 <template>
   <div>
-    <v-card class="pa-1 ma-1" max-width="360">
+    <v-card>
       <v-img
         src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
         height="200px"
       ></v-img>
       <v-card-title>{{ event.title }}</v-card-title>
       <v-card-text>
-        <v-row align="center" class="mx-0 mb-2">
+        <v-row class="mx-0 mb-2">
           <v-rating
             :value="5"
             color="amber"
