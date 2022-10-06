@@ -2,7 +2,7 @@
   <div>
     <v-card>
       <v-img
-        src="https://cdn.vuetifyjs.com/images/cards/sunshine.jpg"
+        :src= event.image
         height="200px"
       ></v-img>
       <v-card-title>{{ event.title }}</v-card-title>
