@@ -1,8 +1,7 @@
 <template>
-  <div> 
-  <v-container
-    >
-      <v-row
+  <div>
+    <!-- <v-container> -->
+    <!-- <v-row
         :align="align"
         no-gutters
       >
@@ -44,8 +43,9 @@
       </v-card>
     </v-col>
     </v-row>
-    </v-container>
+    </v-container> -->
 
+    <v-card> {{ event.id }}</v-card>
   </div>
 </template>
 <script>

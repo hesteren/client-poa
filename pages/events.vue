@@ -1,10 +1,18 @@
 <template lang="">
   <div>
-    <EventCard
-      v-for="event in this.$store.state.events.events"
-      :event="event"
-      :key="event.id"
-    ></EventCard>
+    <v-container>
+      <v-flex d-flex>
+        <v-layout wrap>
+          <v-flex
+            md4
+            v-for="event in this.$store.state.events.events"
+            :key="event.id"
+          >
+            <EventCard :event="event"></EventCard>
+          </v-flex>
+        </v-layout>
+      </v-flex>
+    </v-container>
   </div>
 </template>
 <script>
