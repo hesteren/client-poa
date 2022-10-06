@@ -5,11 +5,25 @@ export const state = () => ({
       title: 'How to DAO',
       startDate: '',
       endDate: '',
-      location: '',
+      location: 'Hogeschool Utrecht',
       organisation: 'Kalipo',
-      organizer: '',
+      organizer: 'Peter Nobels & Mathias',
       capacity: 100,
-      description: 'How to DAO description',
+      description: 'How to DAO is an event about the blockchain. An DAO is an decentralized autonomous organisation (at the simplest an whatsapp-group). Visit this event at the HU to get to know more! ',
+      members: [
+        {
+          id: 1,
+          name: 'Peter Nobels',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        }, 
+        {
+          id: 2,
+          name: 'Mathias',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        },
+      ],
     },
     {
       id: 2,
@@ -22,6 +36,14 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 2 description',
+      members: [
+        {
+          id: 1,
+          name: 'Peter Nobels',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        },
+      ],
     }]
   })
   
