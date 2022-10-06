@@ -1,17 +1,29 @@
 <template lang="">
   <div>
     <v-container>
-      <v-flex d-flex>
+      <!-- <v-flex d-flex>
         <v-layout wrap>
           <v-flex
-            md4
+            class="md4"
             v-for="event in this.$store.state.events.events"
             :key="event.id"
           >
             <EventCard :event="event"></EventCard>
           </v-flex>
         </v-layout>
-      </v-flex>
+      </v-flex> -->
+
+      <v-row>
+        <v-col
+          cols="12"
+          sm="3"
+          md="4"
+          v-for="event in this.$store.state.events.events"
+          :key="event.id"
+        >
+          <EventCard :event="event"></EventCard>
+        </v-col>
+      </v-row>
     </v-container>
   </div>
 </template>
