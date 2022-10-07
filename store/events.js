@@ -66,8 +66,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 2 description',
-      members: [
-      ],
+      members: [],
     },
     {
       id: 3,

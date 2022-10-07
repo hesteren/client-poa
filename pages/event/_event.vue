@@ -48,9 +48,7 @@
     <div id="members">
       <v-container>
         <v-row 
-        dense=true
         >
-          <p id="no-members-text" v-if="event.members.length < 1"> This event doesn't have members yet</p>
 
           <v-col
           cols="3"
@@ -81,11 +79,13 @@ export default {
       event: {},
     };
   },
+
   mounted() {
     this.event = this.$store.state.events.events.find(
       (event) => event.id === parseInt(this.$route.params.event)
     );
   },
+  
 };
 </script>
 <style scoped>
