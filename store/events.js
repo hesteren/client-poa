@@ -67,18 +67,6 @@ export const state = () => ({
       capacity: 100,
       description: 'How to DAO 2 description',
       members: [
-        {
-          id: 1,
-          name: 'Peter Nobels',
-          image: '/stock-person.png',
-          role: 'Organizer'
-        }, 
-        {
-          id: 2,
-          name: 'Mathias',
-          image: '/stock-person.png',
-          role: 'Organizer'
-        },
       ],
     },
     {

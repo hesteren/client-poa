@@ -48,15 +48,18 @@
     <div id="members">
       <v-container>
         <v-row 
-        dense="true"
+        dense=true
         >
+          <p id="no-members-text" v-if="event.members.length < 1"> This event doesn't have members yet</p>
 
           <v-col
           cols="3"
           md="3"
           v-for="member in event.members"
           :key="member.id">
+          
             
+
             <MemberCard
               :member="member"
             ></MemberCard>
@@ -119,6 +122,11 @@ export default {
 
   #event-image {
     margin-left: 7vh;
+  }
+
+  #no-members-text {
+    margin-left: 1vh;
+    font-style: italic;
   }
 
   #members {
