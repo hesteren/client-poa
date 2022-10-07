@@ -87,7 +87,7 @@ export default {
 </script>
 <style scoped>
   #the-div {
-
+    color: black;
     display: grid;
     grid-template-areas: 
     "event-info     event-image"

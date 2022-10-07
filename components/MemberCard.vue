@@ -1,6 +1,6 @@
 <template>
     <div id="the-div">
-      <v-card id="card">
+      <v-card id="card" outlined>
         <v-card-title id="name">{{ member.name }}</v-card-title>
         <v-card-text id="description">{{ member.role }}</v-card-text>
         <v-img id="img" :src="member.image"></v-img>
@@ -21,9 +21,13 @@
       overflow: hidden;
       max-height: 80px;
       max-width: 300px;
+      box-shadow: rgba(0, 0, 0, 0.16) 1px 1px 1px;
+
     }
 
     #card {
+      background-color: rgb(227, 227, 227);
+      color: black;
       display: grid;
       grid-template-columns: 25vh 11vh;
       grid-template-rows: 6vh 4vh;
@@ -48,6 +52,8 @@
 
     #description {
       margin-top: 0%;
+      color: black;
+
     }
 
     #img {
