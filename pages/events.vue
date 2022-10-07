@@ -1,10 +1,17 @@
 <template lang="">
   <div>
-    <EventCard
-      v-for="event in this.$store.state.events.events"
-      :event="event"
-      :key="event.id"
-    ></EventCard>
+    <v-container>
+      <v-row>
+        <v-col
+          cols="6"
+          md="4"
+          v-for="event in this.$store.state.events.events"
+          :key="event.id"
+        >
+          <EventCard :event="event"></EventCard>
+        </v-col>
+      </v-row>
+    </v-container>
   </div>
 </template>
 <script>
