@@ -1,11 +1,11 @@
 <template>
   <div>
-    <v-card>
+    <v-card color="white">
       <v-img
         :src= event.image
         height="200px"
       ></v-img>
-      <v-card-title>{{ event.title }}</v-card-title>
+      <v-card-title class="black--text">{{ event.title }}</v-card-title>
       <v-card-text>
         <v-row class="mx-0 mb-2">
           <v-rating
@@ -17,9 +17,9 @@
             size="14"
           ></v-rating>
 
-          <div class="grey--text ms-2">5 (413)</div>
+          <div class="black--text ms-2">5 (413)</div>
         </v-row>
-        <div>Organisation: {{ event.organisation }}</div>
+        <div class="black--text">Organisation: {{ event.organisation }}</div>
       </v-card-text>
       <v-divider class="mx-4"></v-divider>
       <v-card-actions>
@@ -30,13 +30,13 @@
       <v-spacer></v-spacer>
 
       <v-btn icon @click="show = !show">
-        <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+        <v-icon class="black--text">{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
       </v-btn>
       </v-card-actions>
         <v-expand-transition>
           <div v-show="show">
             <v-divider></v-divider>
-            <v-card-text>{{ event.description }}</v-card-text>
+            <v-card-text class="black--text">{{ event.description }}</v-card-text>
           </div>
       </v-expand-transition>
     </v-card>
@@ -54,4 +54,8 @@ export default {
 
 };
 </script>
-<style></style>
+<style>
+body {
+
+}
+</style>
