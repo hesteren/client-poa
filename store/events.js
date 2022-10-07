@@ -23,6 +23,36 @@ export const state = () => ({
           image: '/stock-person.png',
           role: 'Organizer'
         },
+        {
+          id: 3,
+          name: 'Max 2',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 4,
+          name: 'Max 1',
+          image: '/stock-person.png',
+          role: 'Scrum master'
+        },
+        {
+          id: 5,
+          name: 'Selcuk',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 6,
+          name: 'Kester',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 7,
+          name: 'Niels',
+          image: '/stock-person.png',
+          role: 'Backlog owner'
+        },
       ],
     },
     {
@@ -42,6 +72,12 @@ export const state = () => ({
           name: 'Peter Nobels',
           image: '/stock-person.png',
           role: 'Organizer'
+        }, 
+        {
+          id: 2,
+          name: 'Mathias',
+          image: '/stock-person.png',
+          role: 'Organizer'
         },
       ],
     },
@@ -56,6 +92,38 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 3 description',
+      members: [
+        {
+          id: 1,
+          name: 'Peter Nobels',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        }, 
+        {
+          id: 2,
+          name: 'Mathias',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        },
+        {
+          id: 3,
+          name: 'Max 2',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 5,
+          name: 'Selcuk',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 6,
+          name: 'Kester',
+          image: '/stock-person.png',
+          role: 'Developer'
+        }
+      ],
     },
     {
       id: 4,
@@ -68,6 +136,26 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 4 description',
+      members: [
+        {
+          id: 1,
+          name: 'Peter Nobels',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        }, 
+        {
+          id: 2,
+          name: 'Mathias',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        },
+        {
+          id: 7,
+          name: 'Niels',
+          image: '/stock-person.png',
+          role: 'Backlog owner'
+        },
+      ],
     },
     {
       id: 5,
@@ -80,6 +168,38 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 5 description',
+      members: [
+        {
+          id: 3,
+          name: 'Max 2',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 4,
+          name: 'Max 1',
+          image: '/stock-person.png',
+          role: 'Scrum master'
+        },
+        {
+          id: 5,
+          name: 'Selcuk',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 6,
+          name: 'Kester',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 7,
+          name: 'Niels',
+          image: '/stock-person.png',
+          role: 'Backlog owner'
+        },
+      ],
     },
     {
       id: 6,
@@ -92,6 +212,32 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 6 description',
+      members: [
+        {
+          id: 1,
+          name: 'Peter Nobels',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        }, 
+        {
+          id: 2,
+          name: 'Mathias',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        },
+        {
+          id: 4,
+          name: 'Max 1',
+          image: '/stock-person.png',
+          role: 'Scrum master'
+        },
+        {
+          id: 7,
+          name: 'Niels',
+          image: '/stock-person.png',
+          role: 'Backlog owner'
+        },
+      ],
     },
     {
       id: 7,
@@ -104,6 +250,14 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 7 description',
+      members: [
+        {
+          id: 1,
+          name: 'Peter Nobels',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        }, 
+      ],
     },
 
     {
@@ -117,6 +271,38 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 8 description',
+      members: [
+        {
+          id: 3,
+          name: 'Max 2',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 4,
+          name: 'Max 1',
+          image: '/stock-person.png',
+          role: 'Scrum master'
+        },
+        {
+          id: 5,
+          name: 'Selcuk',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 6,
+          name: 'Kester',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 7,
+          name: 'Niels',
+          image: '/stock-person.png',
+          role: 'Backlog owner'
+        },
+      ],
     },
     {
       id: 9,
@@ -129,6 +315,26 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 9 description',
+      members: [
+        {
+          id: 1,
+          name: 'Peter Nobels',
+          image: '/stock-person.png',
+          role: 'Organizer'
+        }, 
+        {
+          id: 6,
+          name: 'Kester',
+          image: '/stock-person.png',
+          role: 'Developer'
+        },
+        {
+          id: 7,
+          name: 'Niels',
+          image: '/stock-person.png',
+          role: 'Backlog owner'
+        },
+      ],
     },
   ]
   })

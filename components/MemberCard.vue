@@ -19,6 +19,8 @@
     /* Removes horizontal scrollbar */
     #the-div {
       overflow: hidden;
+      max-height: 80px;
+      max-width: 300px;
     }
 
     #card {
@@ -28,8 +30,8 @@
       grid-template-areas: 
       "name  img"
       "description img";
-      max-height: 80px;
       max-width: 300px;
+
     }
 
     #img {

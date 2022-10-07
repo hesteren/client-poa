@@ -47,10 +47,12 @@
     
     <div id="members">
       <v-container>
-        <v-row>
+        <v-row 
+        dense="true"
+        >
+
           <v-col
-          cols="6"
-          md="4"
+          md="3"
           v-for="member in event.members"
           :key="member.id">
             
@@ -119,8 +121,9 @@ export default {
   }
 
   #members {
-    margin-right: auto;
-    margin-left: 8vh;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 
   #members-text {
