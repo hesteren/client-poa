@@ -8,7 +8,7 @@
           v-for="event in this.$store.state.events.events"
           :key="event.id"
         >
-          <EventCard :event="event"></EventCard>
+          <EventCard class="elevation-1" :event="event"></EventCard>
         </v-col>
       </v-row>
     </v-container>

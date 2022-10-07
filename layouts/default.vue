@@ -1,19 +1,19 @@
 <template>
-  <v-app dark>
-    <v-app-bar app>
-      <v-app-bar-title>Kalipo</v-app-bar-title>
+  <v-app>
+    <v-app-bar app class="header">
+      <v-app-bar-title class="">Kalipo</v-app-bar-title>
 
       <v-spacer></v-spacer>
 
-      <v-btn to="/">Home</v-btn>
-      <v-btn to="/events">Events</v-btn>
+      <v-btn to="/" color="#fff" text>Home</v-btn>
+      <v-btn to="/events" class="ml-4" color="#fff" text>Events</v-btn>
     </v-app-bar>
 
     <v-main>
-      <Nuxt></Nuxt>
+      <Nuxt class="white"></Nuxt>
     </v-main>
 
-    <v-footer></v-footer>
+    <v-footer class="footer">© 2022 - Kalipo B.V.</v-footer>
   </v-app>
 </template>
 
@@ -22,3 +22,9 @@ export default {
   name: "DefaultLayout",
 };
 </script>
+
+<style> 
+.v-app-bar-title__content{
+  width: 200px;
+}
+</style>
