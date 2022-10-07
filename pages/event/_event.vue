@@ -52,6 +52,7 @@
         >
 
           <v-col
+          cols="3"
           md="3"
           v-for="member in event.members"
           :key="member.id">
@@ -121,9 +122,9 @@ export default {
   }
 
   #members {
-    width: 100%;
-    justify-content: center;
-    align-items: center;
+    margin-left: 8vh;
+    width: max-content;
+    
   }
 
   #members-text {
