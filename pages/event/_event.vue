@@ -47,18 +47,15 @@
     
     <div id="members">
       <v-container>
-        <v-row v-for="member in event.members"
-        no-gutters
-        :align="align"
-        :key="member.id"
-        >
-          <v-col v-for="index in 3"
-          class="d-flex child-flex" cols="8" sm="4"
-          >
+        <v-row>
+          <v-col
+          cols="6"
+          md="4"
+          v-for="member in event.members"
+          :key="member.id">
             
             <MemberCard
               :member="member"
-              :key="member.id"
             ></MemberCard>
 
           </v-col>
@@ -76,11 +73,6 @@ export default {
   data() {
     return {
       event: {},
-      alignments: [
-        'start',
-        'center',
-        'end',
-      ],
     };
   },
   mounted() {
@@ -98,7 +90,7 @@ export default {
     "event-info     event-image"
     "members-text   members-text"
     "members        members";
-    grid-template-columns: 60vh 120vh;
+    grid-template-columns: 60vh 200vh;
 
   }
 
@@ -127,7 +119,8 @@ export default {
   }
 
   #members {
-    margin-left: -120px;
+    margin-right: auto;
+    margin-left: 8vh;
   }
 
   #members-text {
