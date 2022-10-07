@@ -1,7 +1,9 @@
 <template>
   <v-app dark>
     <v-app-bar app>
-      <v-app-bar-title>Kalipo</v-app-bar-title>
+      <v-img src="/logo.png"
+      max-width="120"
+      max-height="70"></v-img>
 
       <v-spacer></v-spacer>
 
