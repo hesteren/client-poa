@@ -1,6 +1,17 @@
 <template lang="">
   <div>
-    <input type="text" v-model="search" />
+    <input
+      style="
+        border: 1px solid;
+        margin-top: 5px;
+        margin-left: 5px;
+        border-radius: 10px;
+        padding: 10px;
+      "
+      type="text"
+      v-model="search"
+      placeholder="Search an event"
+    />
     <v-container>
       <v-row>
         <v-col cols="6" md="4" v-for="event in filteredEvents" :key="event.id">
