@@ -1,5 +1,5 @@
 <template lang="">
-  <div>
+  <v-container>
     <input
       style="
         border: 1px solid;
@@ -12,6 +12,7 @@
       v-model="search"
       placeholder="Search an event"
     />
+
     <v-container>
       <v-row>
         <v-col cols="6" md="4" v-for="event in filteredEvents" :key="event.id">
@@ -19,7 +20,7 @@
         </v-col>
       </v-row>
     </v-container>
-  </div>
+  </v-container>
 </template>
 <script>
 import EventCard from "~/components/EventCard.vue";
