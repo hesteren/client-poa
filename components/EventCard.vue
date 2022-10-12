@@ -1,17 +1,14 @@
 <template>
   <div>
     <v-card color="white">
-      <v-img
-        :src= event.image
-        height="200px"
-      ></v-img>
+      <v-img :src="event.image" height="200px"></v-img>
       <v-card-title class="black--text">{{ event.title }}</v-card-title>
       <v-card-text>
         <v-row class="mx-0 mb-2">
           <v-rating
             :value="5"
             color="amber"
-            dense=true
+            dense="true"
             half-increments
             readonly
             size="14"
@@ -27,17 +24,19 @@
           >More information</v-btn
         >
 
-      <v-spacer></v-spacer>
+        <v-spacer></v-spacer>
 
-      <v-btn icon @click="show = !show">
-        <v-icon class="black--text">{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-      </v-btn>
+        <v-btn icon @click="show = !show">
+          <v-icon class="black--text">{{
+            show ? "mdi-chevron-up" : "mdi-chevron-down"
+          }}</v-icon>
+        </v-btn>
       </v-card-actions>
-        <v-expand-transition>
-          <div v-show="show">
-            <v-divider></v-divider>
-            <v-card-text class="black--text">{{ event.description }}</v-card-text>
-          </div>
+      <v-expand-transition>
+        <div v-show="show">
+          <v-divider></v-divider>
+          <v-card-text class="black--text">{{ event.description }}</v-card-text>
+        </div>
       </v-expand-transition>
     </v-card>
   </div>
@@ -51,11 +50,5 @@ export default {
   data: () => ({
     show: false,
   }),
-
 };
 </script>
-<style>
-body {
-
-}
-</style>
