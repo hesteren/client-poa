@@ -1,9 +1,13 @@
 <template>
-  <v-container style="height: 100vh"> </v-container>
+  <v-container>
+    <CreateEventForm></CreateEventForm>
+  </v-container>
 </template>
 <script>
+import CreateEventForm from "~/components/CreateEventForm.vue";
 export default {
   name: "CreateEvent",
+  components: { CreateEventForm },
 };
 </script>
 <style></style>
