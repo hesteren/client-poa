@@ -24,7 +24,7 @@
           v-model="event.description"
           class="pl-4"
           type="text"
-          placeholder="Event title"
+          placeholder="Event description"
         />
         <v-divider></v-divider>
       </v-card>
