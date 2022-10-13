@@ -14,6 +14,7 @@
         </v-col>
       </v-row>
     </v-container>
+
     <v-form>
       <v-card v-if="step == 1">
         <v-card-title>Event title and description</v-card-title>
@@ -29,10 +30,10 @@
           />
           <small>{{ this.event.title.length }} / 30</small>
         </div>
-        <v-card-text
-          >Please write down a description about this new event! Make this
-          interesting for potential attendees.</v-card-text
-        >
+        <v-card-text>
+          Please write down a description about this new event! Make this
+          interesting for potential attendees.
+        </v-card-text>
         <input
           v-model="event.description"
           class="pl-4"
@@ -45,18 +46,35 @@
       </v-card>
 
       <v-card v-if="step == 2">
-        <!-- <v-card-title>Event description</v-card-title>
-        <v-card-text
-          >Please write down a description about this new event! Make this
-          interesting for potential attendees.</v-card-text
+        <v-card-title>Event Image</v-card-title>
+        <v-card-text>
+          Add an image to your event to lure people in! If no image is provided an default image will be used
+        </v-card-text>
+        <v-file-input
+          truncate-length="100"
+          v-model="event.image"
+          show-size
+          accept="image/*"
+          outlined
+          prepend-icon="mdi-camera"
+          label="Upload an image"
         >
+        </v-file-input>
+        <v-divider></v-divider>
+      </v-card>
+
+      <v-card v-if="step == 3">
+        <v-card-title>Event data</v-card-title>
+        <v-card-text>
+          Here you can add all the data people need for your event!
+        </v-card-text>
         <input
           v-model="event.description"
           class="pl-4"
           type="text"
           placeholder="Event description"
         />
-        <v-divider></v-divider> -->
+        <v-divider></v-divider>
       </v-card>
 
       <!-- next steps here -->
@@ -85,10 +103,15 @@ export default {
   data() {
     return {
       step: 1,
-      steps: 5,
+      steps: 4,
       event: {
         title: "",
         description: "",
+        image: null,
+        data: {
+          "start date" : null,
+        }
+
       },
     };
   },
