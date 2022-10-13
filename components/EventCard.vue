@@ -8,7 +8,7 @@
           <v-rating
             :value="5"
             color="amber"
-            dense="true"
+            dense
             half-increments
             readonly
             size="14"
