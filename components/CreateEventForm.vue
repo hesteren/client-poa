@@ -48,7 +48,8 @@
       <v-card v-if="step == 2">
         <v-card-title>Event Image</v-card-title>
         <v-card-text>
-          Add an image to your event to lure people in! If no image is provided an default image will be used
+          Add an image to your event to lure people in! If no image is provided
+          , a default image will be used.
         </v-card-text>
         <v-file-input
           truncate-length="100"
@@ -89,7 +90,7 @@
             ><v-icon> mdi-arrow-right-thin </v-icon></v-btn
           >
 
-          <v-btn v-if="step == 5" @click="createEvent"
+          <v-btn v-if="step == 4" @click="createEvent"
             >Sign &nbsp; <v-icon>mdi-draw</v-icon></v-btn
           >
         </v-card-actions>
@@ -109,9 +110,8 @@ export default {
         description: "",
         image: null,
         data: {
-          "start date" : null,
-        }
-
+          "start date": null,
+        },
       },
     };
   },
