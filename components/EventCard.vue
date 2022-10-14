@@ -20,7 +20,7 @@
       </v-card-text>
       <v-divider class="mx-4"></v-divider>
       <v-card-actions>
-        <v-btn color="light-blue lighten-2" text :to="`event/${event.id}`"
+        <v-btn color="light-blue lighten-2" text :to="`events/${event.id}`"
           >More information</v-btn
         >
 
