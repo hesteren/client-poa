@@ -4,7 +4,7 @@
       style="
         border: 1px solid;
         margin-top: 5px;
-        margin-left: 5px;
+        margin-left: 10px;
         border-radius: 10px;
         padding: 10px;
       "
