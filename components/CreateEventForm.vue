@@ -18,7 +18,50 @@
           <h3>Create a new event</h3>
         </v-col>
         <v-col class="text-right">
-          <v-btn to="/events" icon elevation="2" ><v-icon to="/events">mdi-window-close</v-icon></v-btn>
+          <div class="text-right">
+            <v-dialog
+              v-model="dialog"
+              width="400"
+            >
+              <template v-slot:activator="{ on, attrs }">
+                <v-btn
+                  v-bind="attrs"
+                  v-on="on"
+                icon elevation="2" ><v-icon to="/events">mdi-window-close</v-icon>
+                </v-btn>
+              </template>
+
+              <v-card>
+                <v-card-title class="text-h5 white--text primary">
+                  Exit creation of event
+                </v-card-title>
+
+                <v-card-text class="mt-6">
+                  Are you sure you want to exit? Your input will be lost.
+                </v-card-text>
+
+                <v-divider></v-divider>
+
+                <v-card-actions>
+                  <v-btn
+                    color="warning"
+                    text
+                    @click="dialog = false"
+                  >
+                    No
+                  </v-btn>
+                  <v-spacer></v-spacer>
+                  <v-btn
+                    color="primary"
+                    text
+                    to="/events"
+                  >
+                    Yes
+                  </v-btn>
+                </v-card-actions>
+              </v-card>
+            </v-dialog>
+          </div>
         </v-col>
       </v-row>
     </v-container>
@@ -312,9 +355,57 @@
             ><v-icon> mdi-arrow-right-thin </v-icon></v-btn
           >
 
-          <v-btn id="sign-button" v-if="step == steps" @click="createEvent"
-            >Sign &nbsp; <v-icon>mdi-draw</v-icon></v-btn
+
+  <div class="text-center" v-if="step == steps">
+    <v-dialog
+      v-model="dialog"
+      width="400"
+    >
+      <template v-slot:activator="{ on, attrs }">
+        <v-btn
+          id="sign-button" 
+          v-bind="attrs"
+          v-on="on"
+        >
+          Sign &nbsp; <v-icon>mdi-draw</v-icon>
+        </v-btn>
+      </template>
+
+      <v-card>
+        <v-card-title class="text-h5 white--text primary">
+          Confirm creation of event
+        </v-card-title>
+
+        <v-card-text class="mt-6">
+          Are you sure you want to create this event? This action cannot be undone.
+        </v-card-text>
+
+        <v-divider></v-divider>
+
+        <v-card-actions>
+          <v-btn
+            color="warning"
+            text
+            @click="dialog = false"
           >
+            Take me back
+          </v-btn>
+          <v-spacer></v-spacer>
+          <v-btn
+            color="primary"
+            text
+            @click="createEvent"
+          >
+            Sign &nbsp; <v-icon>mdi-draw</v-icon>
+          </v-btn>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
+  </div>
+
+          <!-- <v-btn id="sign-button" v-if="step == steps" @click="createEvent"
+            >Sign &nbsp; <v-icon>mdi-draw</v-icon></v-btn
+          > -->
         </v-card-actions>
     </v-form>
   </v-card>
@@ -331,6 +422,7 @@ export default {
   name: "CreateEventForm",
   data() {
     return {
+      dialog: false,
       step: 1,
       steps: 6,
       customDataCount: 1,
@@ -387,7 +479,7 @@ export default {
         return this.event.maxAttendees == null ? 'No max. attendees registered.' : this.event.maxAttendees;
       },
       eventPrice() {
-        return this.event.price == null ? 'Free.' : "€" + this.event.price;
+        return this.event.price == null || this.event.price == 0 ? 'Free.' : "€" + this.event.price;
       },
   },
   created() {
