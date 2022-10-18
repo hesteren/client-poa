@@ -432,7 +432,7 @@ export default {
     ...mapMutations(['events/ADD_EVENT']),
     createEvent() {
       this.$store.commit('events/ADD_EVENT', this.event);
-      this.$router.push('/events/');
+      this.$router.push('/events');
     }
   },
 };
