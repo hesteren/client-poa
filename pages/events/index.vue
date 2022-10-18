@@ -20,7 +20,13 @@
         </v-col>
       </v-row>
     </v-container>
+      <div id="createButton">
+         <v-btn to="/events/create" fab dark large color="primary" fixed right bottom>
+        <v-icon dark>{{ "mdi-plus" }}</v-icon>
+    </v-btn>
+  </div>
   </v-container>
+
 </template>
 <script>
 import EventCard from "~/components/EventCard.vue";

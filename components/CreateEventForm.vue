@@ -231,6 +231,7 @@
             class="mx-2"
             fab
             dark
+            small
             color="indigo"
             @click="addCustomData"
           >
@@ -243,6 +244,61 @@
 
       </v-card>
 
+    
+       <v-card v-if="step === 6" elevation="0" class="card" id="card-4">
+
+        <v-card-title>Overview</v-card-title>
+        <v-card-text>
+          This is an overview of your new event. If you would like to change the data, press previous until you find the data you would like to change.
+          If you're happy with this overview, press the sign button to create your new event.
+        </v-card-text>
+        <v-divider></v-divider>
+
+        <v-container id="customdata-container">
+          <v-row>
+            <v-col cols="4" sm="4">
+              <v-card-title>Event title</v-card-title>
+              <v-card-text class="mt-n3">{{ eventTitle }}</v-card-text>
+            </v-col>
+            <v-col class="ml-n10" cols="8" sm="8">
+              <v-card-title>Event description</v-card-title>
+              <v-card-text class="mt-n3">{{ eventDescription }}</v-card-text>
+            </v-col>
+          </v-row>
+          <v-row class="mt-n2">
+            <v-col col="4" sm="4">
+              <v-card-title>Start date</v-card-title>
+              <v-card-text class="mt-n3">{{ eventStartDate }}</v-card-text>
+            </v-col>
+            <v-col class="ml-n10">
+                <v-card-title>Start time</v-card-title>
+              <v-card-text class="mt-n3">{{ eventStartTime }}</v-card-text>
+            </v-col>
+            <v-col col="4" sm="4">
+              <v-card-title>End date</v-card-title>
+              <v-card-text class="mt-n3">{{ eventEndDate }}</v-card-text>
+            </v-col>
+            <v-col class="ml-n10">
+              <v-card-title>End time</v-card-title>
+              <v-card-text class="mt-n3">{{ eventEndTime }}</v-card-text>
+            </v-col>
+          </v-row>
+          <v-row>
+            <v-col>
+              <v-card-title>Event location</v-card-title>
+              <v-card-text class="mt-n3">{{ eventLocation }}</v-card-text>
+            </v-col>
+            <v-col>
+              <v-card-title>Max. Attendees</v-card-title>
+              <v-card-text class="mt-n3">{{ eventMaxAttendees }}</v-card-text>
+            </v-col>
+            <v-col>
+              <v-card-title>Price</v-card-title>
+              <v-card-text class="mt-n3">{{ eventPrice }}</v-card-text>
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-card>
 
 
       <!-- next steps here -->
@@ -269,8 +325,6 @@
 
 </template>
 <script>
-
-
 export default {
   name: "CreateEventForm",
   data() {
@@ -304,6 +358,35 @@ export default {
         (v) => (v && v.length <= 50) || "Location must be less than 50 characters",
       ],
     };
+  },
+  computed: {
+      eventTitle() {
+        return this.event.title == '' ? 'No title registered.' : this.event.title;
+      },
+      eventDescription() {
+        return this.event.description == '' ? 'No description registered.' : this.event.description;
+      },
+      eventStartDate() {
+        return this.event.startDate == null ? 'No start date registered.' : this.event.startDate;
+      },
+      eventEndDate() {
+        return this.event.endDate == null ? 'No end date registered.' : this.event.endDate;
+      },
+      eventStartTime() {
+        return this.event.startTime == null ? 'No start time registered.' : this.event.startTime;
+      },
+      eventEndTime() {
+        return this.event.endTime == null ? 'No end time registered.' : this.event.endTime;
+      },
+      eventLocation() {
+        return this.event.location == null ? 'No location registered.' : this.event.location;
+      },
+      eventMaxAttendees() {
+        return this.event.maxAttendees == null ? 'No max. attendees registered.' : this.event.maxAttendees;
+      },
+      eventPrice() {
+        return this.event.price == null ? 'Free.' : "€" + this.event.price;
+      },
   },
   created() {
 

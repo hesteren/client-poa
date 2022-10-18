@@ -1,7 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar id="app" app class="header">
+    <v-app-bar id="app" app class="header" color="primary">
+      <router-link to="/">
       <v-img src="/logo.png" max-width="120" max-height="70"></v-img>
+      </router-link>
 
       <v-spacer></v-spacer>
 
