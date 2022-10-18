@@ -20,7 +20,7 @@
         <v-col class="text-right">
           <div class="text-right">
             <v-dialog
-              v-model="dialog"
+              v-model="dialogexit"
               width="400"
             >
               <template v-slot:activator="{ on, attrs }">
@@ -46,7 +46,7 @@
                   <v-btn
                     color="warning"
                     text
-                    @click="dialog = false"
+                    @click="dialogexit = false"
                   >
                     No
                   </v-btn>
@@ -423,6 +423,7 @@ export default {
   data() {
     return {
       dialog: false,
+      dialogexit: false,
       step: 1,
       steps: 6,
       customDataCount: 1,
