@@ -336,9 +336,17 @@ export const state = () => ({
   }
   
   export const mutations = {
-    // increment(state) {
-    //   state.counter++
-    // }
+      ADD_EVENT(state, data) {
+        data.id = state.events.length + 1;
+
+        if (data.image == null) {
+          data.image = 'https://blog.aragon.org/content/images/size/w2000/2021/07/DAO_article.png';
+        } else {
+          data.image = URL.createObjectURL(data.image);
+        }
+        
+        state.events.push(data);
+      }
   }
   
   export const actions = {

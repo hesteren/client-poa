@@ -325,6 +325,8 @@
 
 </template>
 <script>
+import { mapState, mapMutations } from 'vuex'
+
 export default {
   name: "CreateEventForm",
   data() {
@@ -427,10 +429,11 @@ export default {
       this.customDataCount--;
       this.event.customData = this.event.customData.filter((data) => data.id != id);
     },
+    ...mapMutations(['events/ADD_EVENT']),
     createEvent() {
-      // TODO: Set price to free if price is empty or 0
-      alert("created");
-    },
+      this.$store.commit('events/ADD_EVENT', this.event);
+      this.$router.push('/events/');
+    }
   },
 };
 </script>
