@@ -69,6 +69,7 @@
                   maxlength="30"
                   counter="30"
                   required
+                  class="ml-1 mr-1"
                 />
               </v-col>
 
@@ -80,6 +81,7 @@
                   counter="300"
                   outlined
                   no-resize
+                  class="ml-1 mr-1"
                 />
               </v-col>
             </v-card>
@@ -101,6 +103,7 @@
                   append-icon="mdi-camera"
                   label="Upload an image"
                   required
+                  class="mr-1"
                   style="margin-top: 70px"
                 >
                 </v-file-input>
@@ -117,6 +120,7 @@
                 <v-row>
                   <v-col cols="12" sm="8">
                     <v-text-field
+                      class="ml-1"
                       type="date"
                       v-model="event.startDate"
                       label="Start date"
@@ -125,6 +129,7 @@
 
                   <v-col cols="12" sm="4">
                     <v-text-field
+                      class="mr-1"
                       type="time"
                       v-model="event.startTime"
                       label="Start time"
@@ -133,6 +138,7 @@
 
                   <v-col cols="12" sm="8">
                     <v-text-field
+                      class="ml-1"
                       type="date"
                       v-model="event.endDate"
                       label="End date"
@@ -141,6 +147,7 @@
 
                   <v-col cols="12" sm="4">
                     <v-text-field
+                      class="mr-1"
                       type="time"
                       v-model="event.endTime"
                       label="End time"
@@ -159,6 +166,7 @@
 
               <v-col cols="12" sm="12">
                 <v-text-field
+                  class="ml-1 mr-1"
                   dense
                   v-model="event.capacity"
                   label="Location"
@@ -171,6 +179,7 @@
 
               <v-col cols="12" sm="12">
                 <v-text-field
+                  class="ml-1 mr-1"
                   dense
                   type="number"
                   v-model="event.maxAttendees"
@@ -182,6 +191,7 @@
 
               <v-col cols="12" sm="12">
                 <v-text-field
+                  class="ml-1 mr-1"
                   dense
                   type="number"
                   append-icon="mdi-currency-eur"
@@ -204,7 +214,7 @@
 
               <v-container id="customdata-container">
                 <v-row v-for="data in this.event.customData" :key="data.id">
-                  <v-col cols="12" sm="5" class="ml-4">
+                  <v-col cols="12" sm="5" class="ml-1">
                     <v-text-field
                       v-model="data.key"
                       label="Type"
@@ -238,7 +248,7 @@
 
                 <v-btn
                   v-if="customDataCount <= 10"
-                  class="mx-2"
+                  class="ml-1"
                   fab
                   small
                   color="primary"
@@ -313,14 +323,16 @@
               </v-container>
             </v-card>
 
-            <!-- next steps here -->
-
             <v-card-actions>
-              <v-btn v-if="step != 1" @click="previousStep"
+              <v-btn class="ml-2" v-if="step != 1" @click="previousStep"
                 ><v-icon>mdi-arrow-left-thin</v-icon></v-btn
               >
               <v-spacer></v-spacer>
-              <v-btn color="primary" v-if="step != steps" @click="nextStep"
+              <v-btn
+                class="mr-2"
+                color="primary"
+                v-if="step != steps"
+                @click="nextStep"
                 ><v-icon> mdi-arrow-right-thin </v-icon></v-btn
               >
 
