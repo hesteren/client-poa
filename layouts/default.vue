@@ -2,7 +2,7 @@
   <v-app>
     <v-app-bar id="app" app class="header" color="primary">
       <router-link to="/">
-      <v-img src="/logo.png" max-width="120" max-height="70"></v-img>
+        <v-img src="/logo.png" max-width="120" max-height="70"></v-img>
       </router-link>
 
       <v-spacer></v-spacer>
@@ -24,10 +24,3 @@ export default {
   name: "DefaultLayout",
 };
 </script>
-
-<style scoped>
-  #app {
-    background: #0e2f6b;
-  }
-
-</style>
