@@ -85,7 +85,7 @@
             </v-card>
 
             <v-card v-if="step == 2" elevation="0" class="card">
-              <v-card-title>Event Image</v-card-title>
+              <v-card-title>Event image</v-card-title>
               <v-card-text>
                 Add an image to your event to lure people in! If no image is
                 provided a default image will be used.
@@ -108,7 +108,7 @@
             </v-card>
 
             <v-card v-if="step == 3" elevation="0" class="card">
-              <v-card-title>Event Date's</v-card-title>
+              <v-card-title>Date and time</v-card-title>
               <v-card-text>
                 Here you can fill in the date and time of your event!
               </v-card-text>
@@ -151,9 +151,10 @@
             </v-card>
 
             <v-card v-if="step === 4" elevation="0" class="card">
-              <v-card-title>Event data</v-card-title>
+              <v-card-title>Required data</v-card-title>
               <v-card-text>
-                Here you can fill in the data about your event!
+                This data is required because it's crucial for attendees to
+                know!
               </v-card-text>
 
               <v-col cols="12" sm="12">
@@ -197,9 +198,8 @@
             <v-card v-if="step === 5" elevation="0" class="card" id="card-4">
               <v-card-title>Custom event data</v-card-title>
               <v-card-text>
-                Here you can add all the extra data your event needs! Fill in
-                the type of the data and the value of data. You can add up to
-                ten custom data fields!
+                Here you can add all the extra data your event needs! You can
+                add up to ten custom data fields!
               </v-card-text>
 
               <v-container id="customdata-container">
