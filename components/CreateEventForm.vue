@@ -55,7 +55,7 @@
 
           <v-form>
             <v-card v-if="step == 1" class="card" elevation="0">
-              <v-card-title>Event title and description</v-card-title>
+              <v-card-title>Title and description</v-card-title>
               <v-card-text
                 >Choose a unique title and description people will remember!
                 Make this interesting for potential attendees.
@@ -87,7 +87,7 @@
             </v-card>
 
             <v-card v-if="step == 2" elevation="0" class="card">
-              <v-card-title>Event image</v-card-title>
+              <v-card-title>Image</v-card-title>
               <v-card-text>
                 Add an image to your event to lure people in! If no image is
                 provided a default image will be used.
@@ -206,7 +206,7 @@
             </v-card>
 
             <v-card v-if="step === 5" elevation="0" class="card" id="card-4">
-              <v-card-title>Custom event data</v-card-title>
+              <v-card-title>Custom data</v-card-title>
               <v-card-text>
                 Here you can add all the extra data your event needs! You can
                 add up to ten custom data fields!
