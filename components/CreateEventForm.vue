@@ -324,12 +324,12 @@
             </v-card>
 
             <v-card-actions>
-              <v-btn class="ml-2" v-if="step != 1" @click="previousStep"
+              <v-btn class="ml-2 mb-2" v-if="step != 1" @click="previousStep"
                 ><v-icon>mdi-arrow-left-thin</v-icon></v-btn
               >
               <v-spacer></v-spacer>
               <v-btn
-                class="mr-2"
+                class="mr-2 mb-2"
                 color="primary"
                 v-if="step != steps"
                 @click="nextStep"
@@ -344,6 +344,7 @@
                       id="sign-button"
                       v-bind="attrs"
                       v-on="on"
+                      class="mr-2 mb-2"
                     >
                       Sign &nbsp; <v-icon>mdi-draw</v-icon>
                     </v-btn>
