@@ -10,7 +10,7 @@ export const state = () => ({
       organizer: 'Peter Nobels & Mathias',
       capacity: 100,
       description: 'How to DAO 1 is an event about the blockchain. An DAO is an decentralized autonomous organisation (at the simplest an whatsapp-group). Visit this event at the HU to get to know more! ',
-      members: [
+      attendees: [
         {
           id: 1,
           name: 'Peter Nobels',
@@ -66,7 +66,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 2 description',
-      members: [],
+      attendees: [],
     },
     {
       id: 3,
@@ -79,7 +79,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 3 description',
-      members: [
+      attendees: [
         {
           id: 1,
           name: 'Peter Nobels',
@@ -123,7 +123,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 4 description',
-      members: [
+      attendees: [
         {
           id: 1,
           name: 'Peter Nobels',
@@ -155,7 +155,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 5 description',
-      members: [
+      attendees: [
         {
           id: 3,
           name: 'Max 2',
@@ -199,7 +199,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 6 description',
-      members: [
+      attendees: [
         {
           id: 1,
           name: 'Peter Nobels',
@@ -237,7 +237,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 7 description',
-      members: [
+      attendees: [
         {
           id: 1,
           name: 'Peter Nobels',
@@ -258,7 +258,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 8 description',
-      members: [
+      attendees: [
         {
           id: 3,
           name: 'Max 2',
@@ -302,7 +302,7 @@ export const state = () => ({
       organizer: '',
       capacity: 100,
       description: 'How to DAO 9 description',
-      members: [
+      attendees: [
         {
           id: 1,
           name: 'Peter Nobels',

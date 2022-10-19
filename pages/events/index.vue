@@ -10,7 +10,6 @@
     </v-text-field>
 
     <v-container>
-      <h1>{{ test }}</h1>
       <v-row>
         <v-col cols="6" md="4" v-for="event in filteredEvents" :key="event.id">
           <EventCard class="elevation-1" :event="event"></EventCard>
