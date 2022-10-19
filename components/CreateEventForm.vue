@@ -98,7 +98,7 @@
                   v-model="event.image"
                   show-size
                   accept="image/*"
-                  prepend-icon="mdi-camera"
+                  append-icon="mdi-camera"
                   label="Upload an image"
                   required
                   style="margin-top: 70px"
