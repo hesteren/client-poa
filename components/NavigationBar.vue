@@ -64,10 +64,10 @@ export default {
 
 <style scoped>
   #app {
-    z-index: 0;
+    z-index: 2;
   }
 
   #navbar-drawer {
-    z-index: 2;
+    z-index: 3;
   }
 </style>
