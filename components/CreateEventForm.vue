@@ -4,9 +4,8 @@
     class="d-flex fill-height justify-center align-center"
   >
     <v-row>
-      <v-col sm="3"></v-col>
 
-      <v-col cols="4" sm="6">
+      <v-col cols="12" sm="12">
         <v-card id="main-card" outlined elevation="2">
           <!-- <div>
       <v-card-title left>Create a new event</v-card-title>
@@ -510,6 +509,7 @@ export default {
 <style scoped>
 #main-container {
   margin-top: 10vh;
+  max-width: 700px;
 }
 
 .card {

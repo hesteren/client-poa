@@ -1,19 +1,19 @@
 <template>
   <div id="the-div">
-    
+
     <div id="event-info">
       <h1>{{ event.title }}</h1>
       <p id="event-description">{{ event.description }}</p>
 
       <ul id="info-list">
-        <li v-if="event.startDate != '' "> 
+        <li v-if="event.startDate != '' ">
           Startdate : {{ event.startDate }}
         </li>
         <li v-if="event.endDate != ''" >
           Enddate : {{ event.endDate }}
         </li>
         <li  v-if="event.location != ''">
-          Location: {{ event.location }} 
+          Location: {{ event.location }}
         </li>
         <li v-if="event.organisation != ''">
           Organisation: {{ event.organisation }}
@@ -28,7 +28,7 @@
     </div>
 
 
-    <v-img 
+    <v-img
       id="event-image"
       src="/DAO_article.png"
       max-width="1000"
@@ -44,19 +44,15 @@
     </h2>
 
     <br>
-    
+
     <div id="members">
       <v-container>
-        <v-row 
+        <v-row
         >
 
-          <v-col
-          cols="3"
-          md="3"
+          <v-col cols="12" md="3"
           v-for="member in event.members"
           :key="member.id">
-          
-            
 
             <MemberCard
               :member="member"
@@ -85,14 +81,14 @@ export default {
       (event) => event.id === parseInt(this.$route.params.event)
     );
   },
-  
+
 };
 </script>
 <style scoped>
   #the-div {
     color: black;
     display: grid;
-    grid-template-areas: 
+    grid-template-areas:
     "event-info     event-image"
     "members-text   members-text"
     "members        members";
@@ -130,9 +126,7 @@ export default {
   }
 
   #members {
-    margin-left: 8vh;
-    width: max-content;
-    
+
   }
 
   #members-text {
@@ -158,5 +152,5 @@ export default {
     margin-top: 3vh;
     font-size: 1rem;
     font-weight: bold;
-  } 
+  }
 </style>

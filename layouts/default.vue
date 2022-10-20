@@ -1,15 +1,8 @@
 <template>
   <v-app>
-    <v-app-bar id="app" app class="header" color="primary">
-      <router-link to="/">
-      <v-img src="/logo.png" max-width="120" max-height="70"></v-img>
-      </router-link>
+    <navigation-bar>
 
-      <v-spacer></v-spacer>
-
-      <v-btn to="/" color="#fff" text>Home</v-btn>
-      <v-btn to="/events" class="ml-4" color="#fff" text>Events</v-btn>
-    </v-app-bar>
+    </navigation-bar>
 
     <v-main class="white">
       <Nuxt class="white"></Nuxt>
@@ -25,9 +18,3 @@ export default {
 };
 </script>
 
-<style scoped>
-  #app {
-    background: #0e2f6b;
-  }
-
-</style>
