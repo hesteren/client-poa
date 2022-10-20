@@ -54,6 +54,7 @@
 
           <v-form>
             <v-card v-if="step == 1" class="card" elevation="0">
+
               <v-card-title>Title and description</v-card-title>
               <v-card-text
                 >Choose a unique title and description people will remember!
@@ -85,7 +86,8 @@
               </v-col>
             </v-card>
 
-            <v-card v-if="step == 2" elevation="0" class="card">
+            <v-card v-if="step == 2" elevation="0" id="card-4" class="card">
+              <v-container id="customdata-container">
               <v-card-title>Image</v-card-title>
               <v-card-text>
                 Add an image to your event to lure people in! If no image is
@@ -107,6 +109,13 @@
                 >
                 </v-file-input>
               </v-col>
+
+              <v-col>
+                <v-divider></v-divider>
+                <v-card-text small>Your preview will appear here: </v-card-text>
+                <v-img class="mt-n3" :src="previewImage()"></v-img>
+              </v-col>
+            </v-container>
             </v-card>
 
             <v-card v-if="step == 3" elevation="0" class="card">
@@ -167,7 +176,7 @@
                 <v-text-field
                   class="ml-1 mr-1"
                   dense
-                  v-model="event.capacity"
+                  v-model="event.location"
                   label="Location"
                   :rules="locationRules"
                   maxlength="50"
@@ -472,7 +481,7 @@ export default {
       return this.event.price == null || this.event.price == 0
         ? "Free."
         : "€" + this.event.price;
-    },
+    }
   },
   created() {},
   methods: {
@@ -489,6 +498,11 @@ export default {
     },
     previousStep() {
       this.step--;
+    },
+    previewImage() {
+      if (this.event.image !== null) {
+        return URL.createObjectURL(this.event.image);
+      }
     },
     addCustomData() {
       // TODO: is a maximum necessary? (ask Peter)
