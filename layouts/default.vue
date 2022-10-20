@@ -1,8 +1,6 @@
 <template>
   <v-app>
-    <navigation-bar>
-
-    </navigation-bar>
+    <navigation-bar> </navigation-bar>
 
     <v-main class="white">
       <Nuxt class="white"></Nuxt>
@@ -17,4 +15,3 @@ export default {
   name: "DefaultLayout",
 };
 </script>
-
