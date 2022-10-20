@@ -151,7 +151,6 @@
                     <v-text-field
                       class="ml-1"
                       type="date"
-                      :rules="endDateRules"
                       v-model="event.endDate"
                       :min="new Date().toISOString().substr(0, 10)"
                       label="End date"
@@ -517,7 +516,7 @@ export default {
           }
           break;
         case 3:
-          if (!this.event.startDate || !this.event.endDate) {
+          if (!this.event.startDate) {
             return false;
           }
           break;
