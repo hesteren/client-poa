@@ -52,7 +52,7 @@
             </v-row>
           </v-container>
 
-          <v-form>
+          <v-form ref="form" v-model="valid" lazy-validation>
             <v-card v-if="step == 1" class="card" elevation="0">
 
               <v-card-title>Title and description</v-card-title>
@@ -66,6 +66,7 @@
                   id="event-title-input"
                   v-model="event.title"
                   label="Event title"
+                  :rules="titleRules"
                   maxlength="30"
                   counter="30"
                   required
@@ -112,7 +113,7 @@
 
               <v-col>
                 <v-divider></v-divider>
-                <v-card-text small>Your preview will appear here: </v-card-text>
+                <v-card-text class="font-italic">Your preview will appear here: </v-card-text>
                 <v-img class="mt-n3" :src="previewImage()"></v-img>
               </v-col>
             </v-container>
@@ -130,7 +131,9 @@
                     <v-text-field
                       class="ml-1"
                       type="date"
+                      :rules="startDateRules"
                       v-model="event.startDate"
+                      :min="new Date().toISOString().substr(0, 10)"
                       label="Start date"
                     ></v-text-field>
                   </v-col>
@@ -148,7 +151,9 @@
                     <v-text-field
                       class="ml-1"
                       type="date"
+                      :rules="endDateRules"
                       v-model="event.endDate"
+                      :min="new Date().toISOString().substr(0, 10)"
                       label="End date"
                     ></v-text-field>
                   </v-col>
@@ -192,6 +197,8 @@
                   type="number"
                   v-model="event.maxAttendees"
                   label="Maximum number of attendees"
+                  hint="Leave the attendees empty or at 0 if the event does not have a limit"
+                  persistent-hint
                   :rules="numberRules"
                   required
                 ></v-text-field>
@@ -400,6 +407,7 @@ export default {
   name: "CreateEventForm",
   data() {
     return {
+      valid: true,
       dialog: false,
       dialogexit: false,
       step: 1,
@@ -426,16 +434,25 @@ export default {
           },
         ],
       },
+      titleRules: [
+        (v) => v && !!v.trim() && v.length > 3 || "Title is required and must be at least 4 characters"
+      ],
       locationRules: [
-        (v) => !!v || "Location is required",
+        (v) => v && !!v.trim() || "Location is required",
         (v) =>
           (v && v.length <= 50) || "Location must be less than 50 characters",
       ],
       numberRules: [
         (v) =>
           Number.isInteger(Number(v)) || "The value must be an integer number",
-        (v) => v > 0 || "The value must be greater than zero",
+        (v) => v >= 0 || "The value can't be below zero",
       ],
+      startDateRules: [
+        (v) => !!v || "The event must have a start date"
+      ],
+      endDateRules: [
+        (v) => !!v || "The event must have an end date"
+      ]
     };
   },
   computed: {
@@ -473,8 +490,8 @@ export default {
         : this.event.location;
     },
     eventMaxAttendees() {
-      return this.event.maxAttendees == null
-        ? "No max. attendees registered."
+      return this.event.maxAttendees == null || this.event.price == 0
+        ? "No limit."
         : this.event.maxAttendees;
     },
     eventPrice() {
@@ -486,10 +503,29 @@ export default {
   created() {},
   methods: {
     nextStep() {
-      if (this.step == 1) {
-        if (!this.event.title) {
-          return false;
-        }
+      this.$refs.form.validate();
+      // if (this.step == 1) {
+      //   if (!this.event.title) {
+      //     return false;
+      //   }
+      // }
+
+      switch (this.step) {
+        case 1:
+          if (!this.event.title) {
+            return false;
+          }
+          break;
+        case 3:
+          if (!this.event.startDate || !this.event.endDate) {
+            return false;
+          }
+          break;
+        case 4: 
+          if (!this.event.location || this.event.maxAttendees < 0  || this.event.price < 0) {
+            return false;
+          }
+          break;
       }
 
       //TODO: no next step when data is empty

@@ -339,6 +339,16 @@ export const state = () => ({
       ADD_EVENT(state, data) {
         data.id = state.events.length + 1;
 
+        if (data.price == null || data.price == 0) {
+          data.price = "Free."
+        }
+
+        if (data.maxAttendees == null || data.maxAttendees == 0) {
+          data.capacity = "No limit."
+        } else {
+          data.capacity = data.maxAttendees;
+        }
+
         if (data.image == null) {
           data.image = 'https://blog.aragon.org/content/images/size/w2000/2021/07/DAO_article.png';
         } else {
