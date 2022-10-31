@@ -16,7 +16,7 @@
 
           <div class="black--text ms-2">5 (413)</div>
         </v-row>
-        <div class="black--text">Organisation: {{ event.organisation }}</div>
+        <div class="black--text">Location: {{ event.location }}</div>
       </v-card-text>
       <v-divider class="mx-4"></v-divider>
       <v-card-actions>

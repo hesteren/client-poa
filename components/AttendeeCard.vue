@@ -1,11 +1,31 @@
 <template>
-  <div id="the-div">
-    <v-card id="card" outlined>
-      <v-card-title id="name">{{ attendee.name }}</v-card-title>
-      <v-card-text id="description">{{ attendee.role }}</v-card-text>
-      <v-img id="img" :src="attendee.image"></v-img>
-    </v-card>
-  </div>
+  <v-card id="card" outlined elevation="1">
+
+    <v-container>
+      <v-row>
+        <v-col cols="12" md="8">
+          <v-card-title class="pa-0" id="name">{{ attendee.name }}</v-card-title>
+          <v-card-text class="pa-0" id="description">{{ attendee.role }}</v-card-text>
+
+
+        </v-col>
+
+        <v-col cols="12" md="4">
+          <v-avatar >
+            <v-img
+              :src="attendee.image"
+              max-height="50"
+              max-width="50"
+            >
+
+            </v-img>
+          </v-avatar>
+        </v-col>
+      </v-row>
+
+    </v-container>
+  </v-card>
+
 </template>
 <script>
 export default {
@@ -16,49 +36,12 @@ export default {
 };
 </script>
 <style scoped>
-/* Removes horizontal scrollbar */
-#the-div {
-  overflow: hidden;
-  max-height: 80px;
-  max-width: 300px;
-  box-shadow: rgba(0, 0, 0, 0.16) 1px 1px 1px;
-}
 
 #card {
   background-color: rgb(227, 227, 227);
   color: black;
-  display: grid;
-  grid-template-columns: 25vh 11vh;
-  grid-template-rows: 6vh 4vh;
-  grid-template-areas:
-    "name  img"
-    "description img";
   max-width: 300px;
 }
 
-#img {
-  grid-area: img;
-}
 
-#name {
-  grid-area: name;
-}
-
-#description {
-  grid-area: description;
-}
-
-#description {
-  margin-top: 0%;
-  color: black;
-}
-
-#img {
-  margin: auto;
-  width: 60%;
-  max-height: 60px;
-  max-width: 70px;
-  border-radius: 50px;
-  margin-right: 0px;
-}
 </style>

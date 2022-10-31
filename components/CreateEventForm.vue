@@ -520,7 +520,7 @@ export default {
             return false;
           }
           break;
-        case 4: 
+        case 4:
           if (!this.event.location || this.event.maxAttendees < 0  || this.event.price < 0) {
             return false;
           }

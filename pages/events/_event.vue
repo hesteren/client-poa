@@ -5,14 +5,17 @@
       <p id="event-description">{{ event.description }}</p>
 
       <ul id="info-list">
-        <li v-if="event.startDate != ''">Startdate : {{ event.startDate }}</li>
-        <li v-if="event.endDate != ''">Enddate : {{ event.endDate }}</li>
-        <li v-if="event.location != ''">Location: {{ event.location }}</li>
-        <li v-if="event.organisation != ''">
-          Organisation: {{ event.organisation }}
-        </li>
-        <li v-if="event.organizer != ''">Organizer: {{ event.organizer }}</li>
-        <li v-if="event.capacity != ''">Capacity: {{ event.capacity }}</li>
+        <li v-if="event.startDate != null">Startdate: {{ event.startDate }}</li>
+        <li v-if="event.startTime != null">Starttime: {{ event.startTime }}</li>
+        <li v-if="event.endDate != null">Enddate: {{ event.endDate }}</li>
+        <li v-if="event.endTime != null">Endtime: {{ event.endTime }}</li>
+
+        <li v-if="event.location != null">Location: {{ event.location }}</li>
+        <li v-if="event.capacity != null">Capacity: {{ event.capacity }}</li>
+        <li v-if="event.price != null">Price: €{{ event.price }}</li>
+        <li v-else>Price: Free</li>
+
+        <li v-for="data in event.customData" :key="data.id">{{data.key}}: {{data.value}}</li>
       </ul>
     </div>
 
