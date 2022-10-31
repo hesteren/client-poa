@@ -53,7 +53,7 @@
           </v-container>
 
           <v-form ref="form" v-model="valid" lazy-validation>
-            <v-card v-if="step == 1" class="card" elevation="0">
+            <v-card v-if="step == 1" class="card inside-card-scroll" elevation="0">
 
               <v-card-title>Title and description</v-card-title>
               <v-card-text
@@ -88,7 +88,7 @@
             </v-card>
 
             <v-card v-if="step == 2" elevation="0" id="card-4" class="card">
-              <v-container id="customdata-container">
+              <v-container class="inside-card-scroll">
               <v-card-title>Image</v-card-title>
               <v-card-text>
                 Add an image to your event to lure people in! If no image is
@@ -119,7 +119,7 @@
             </v-container>
             </v-card>
 
-            <v-card v-if="step == 3" elevation="0" class="card">
+            <v-card v-if="step == 3" elevation="0" class="card inside-card-scroll">
               <v-card-title>Date and time</v-card-title>
               <v-card-text>
                 Here you can fill in the date and time of your event!
@@ -169,7 +169,7 @@
               </v-container>
             </v-card>
 
-            <v-card v-if="step === 4" elevation="0" class="card">
+            <v-card v-if="step === 4" elevation="0" class="card inside-card-scroll">
               <v-card-title>Required data</v-card-title>
               <v-card-text>
                 This data is required because it's crucial for attendees to
@@ -226,7 +226,7 @@
                 add up to ten custom data fields!
               </v-card-text>
 
-              <v-container id="customdata-container">
+              <v-container class="inside-card-scroll">
                 <v-row v-for="data in this.event.customData" :key="data.id">
                   <v-col cols="12" sm="5" class="ml-1">
                     <v-text-field
@@ -283,7 +283,7 @@
               </v-card-text>
               <v-divider></v-divider>
 
-              <v-container id="customdata-container">
+              <v-container class="inside-card-scroll">
                 <v-row>
                   <v-col cols="4" sm="4">
                     <v-card-title>Event title</v-card-title>
@@ -589,7 +589,7 @@ export default {
   display: flex;
   flex-direction: column;
 }
-#customdata-container {
+.inside-card-scroll {
   flex-grow: 1;
   overflow: auto;
 }
