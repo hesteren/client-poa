@@ -6,8 +6,6 @@
         <v-col cols="12" md="8">
           <v-card-title class="pa-0" id="name">{{ attendee.name }}</v-card-title>
           <v-card-text class="pa-0" id="description">{{ attendee.role }}</v-card-text>
-
-
         </v-col>
 
         <v-col cols="12" md="4">

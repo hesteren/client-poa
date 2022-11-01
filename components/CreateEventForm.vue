@@ -1,7 +1,6 @@
 <template>
   <v-container
     id="main-container"
-    class="d-flex fill-height justify-center align-center"
   >
     <v-row>
 
@@ -511,7 +510,7 @@ export default {
 
       switch (this.step) {
         case 1:
-          if (!this.event.title) {
+          if (!this.event.title || this.event.title.length < 4) {
             return false;
           }
           break;
@@ -521,7 +520,7 @@ export default {
           }
           break;
         case 4:
-          if (!this.event.location || this.event.maxAttendees < 0  || this.event.price < 0) {
+          if (!this.event.location || this.event.location.length > 50 || this.event.maxAttendees < 0  || this.event.price < 0) {
             return false;
           }
           break;

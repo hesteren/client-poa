@@ -1,39 +1,47 @@
 <template>
-  <div id="the-div">
-    <div id="event-info">
-      <h1>{{ event.title }}</h1>
-      <p id="event-description">{{ event.description }}</p>
+  <v-container  class="d-flex fill-height justify-center align-center">
+    <v-row>
+      <v-col cols="5" id="info-event">
 
-      <ul id="info-list">
-        <li v-if="event.startDate != null">Startdate: {{ event.startDate }}</li>
-        <li v-if="event.startTime != null">Starttime: {{ event.startTime }}</li>
-        <li v-if="event.endDate != null">Enddate: {{ event.endDate }}</li>
-        <li v-if="event.endTime != null">Endtime: {{ event.endTime }}</li>
+        <div>
+          <h1>{{ event.title }}</h1>
+          <p class=font-size-1>{{ event.description }}</p>
 
-        <li v-if="event.location != null">Location: {{ event.location }}</li>
-        <li v-if="event.capacity != null">Capacity: {{ event.capacity }}</li>
-        <li v-if="event.price != null">Price: €{{ event.price }}</li>
-        <li v-else>Price: Free</li>
+          <ul class="font-size-1 font-weight-bold">
+            <li v-if="event.startDate != null">Startdate: {{ event.startDate }}</li>
+            <li v-if="event.startTime != null">Starttime: {{ event.startTime }}</li>
+            <li v-if="event.endDate != null">Enddate: {{ event.endDate }}</li>
+            <li v-if="event.endTime != null">Endtime: {{ event.endTime }}</li>
 
-        <li v-for="data in event.customData" :key="data.id">{{data.key}}: {{data.value}}</li>
-      </ul>
-    </div>
+            <li v-if="event.location != null">Location: {{ event.location }}</li>
+            <li v-if="event.capacity != null">Capacity: {{ event.capacity }}</li>
+            <li v-if="event.price != null">Price: €{{ event.price }}</li>
+            <li v-else>Price: Free</li>
 
-    <v-img
-      id="event-image"
-      src="/DAO_article.png"
-      max-width="1000"
-      max-length="1000"
-    >
-    </v-img>
+            <li v-for="data in event.customData" :key="data.id">{{ data.key }}: {{ data.value }}</li>
+          </ul>
+        </div>
+      </v-col>
 
-    <br />
+      <v-col cols="7">
 
-    <h2 id="attendees-text">Attendees</h2>
+        <v-img
+          class="mt-16"
+          id="event-image"
+          src="/DAO_article.png"
+          max-width="1000"
+          max-length="1000"
+        >
+        </v-img>
 
-    <br />
+      </v-col>
 
-    <div id="attendees">
+    </v-row>
+
+
+    <v-row>
+      <h2 class="ml-3 text-h2">Attendees</h2>
+
       <v-container>
         <v-row>
           <v-col
@@ -46,11 +54,14 @@
           </v-col>
         </v-row>
       </v-container>
-    </div>
-  </div>
+
+    </v-row>
+  </v-container>
+
 </template>
 <script>
 import AttendeeCard from "~/components/AttendeeCard.vue";
+
 export default {
   name: "Event",
   data() {
@@ -63,82 +74,20 @@ export default {
       (event) => event.id === parseInt(this.$route.params.event)
     );
   },
-  components: { AttendeeCard },
+  components: {AttendeeCard},
 };
 </script>
 <style scoped>
-#the-div {
-  color: black;
-  display: grid;
-  grid-template-areas:
-    "event-info     event-image"
-    "attendees-text   attendees-text"
-    "attendees        attendees";
-  grid-template-columns: 60vh 200vh;
-}
 
-#event-info {
-  grid-area: event-info;
-}
-
-#event-image {
-  grid-area: event-image;
-}
-
-#attendees-text {
-  grid-area: attendees-text;
-}
-
-#attendees {
-  grid-area: attendees;
-}
-
-#event-info {
-  max-width: 80vh;
-}
-
-#event-image {
-  margin-left: 7vh;
-}
-
-#no-attendees-text {
-  margin-left: 1vh;
-  font-style: italic;
-}
-
-#attendees {
-  margin-left: 8vh;
-  width: max-content;
-}
-
-#attendees-text {
-  margin-top: 5vh;
-  font-size: 2rem;
-  margin-left: 10vh;
+#info-event {
+  margin-top: 12vh;
 }
 
 h1 {
   font-size: 3rem;
-  margin-left: 10vh;
-  margin-top: 15vh;
 }
 
-#event-description {
+.font-size-1 {
   font-size: 1rem;
-  margin-left: 10vh;
-  margin-top: 1vh;
-}
-
-#event-description {
-  font-size: 1rem;
-  margin-left: 10vh;
-  margin-top: 1vh;
-}
-
-#info-list {
-  margin-left: 9vh;
-  margin-top: 3vh;
-  font-size: 1rem;
-  font-weight: bold;
 }
 </style>
