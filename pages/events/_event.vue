@@ -46,7 +46,7 @@
         <v-row>
           <v-col
             cols="3"
-            md="3"
+            md="2"
             v-for="attendee in event.attendees"
             :key="attendee.id"
           >

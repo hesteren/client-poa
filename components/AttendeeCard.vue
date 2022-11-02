@@ -8,7 +8,7 @@
           <v-card-text class="pa-0" id="description">{{ attendee.role }}</v-card-text>
         </v-col>
 
-        <v-col cols="12" md="4">
+        <v-col cols="12" md="2">
           <v-avatar >
             <v-img
               :src="attendee.image"
