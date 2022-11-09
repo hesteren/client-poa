@@ -34,7 +34,15 @@
       <p>Some test text</p>
     </Tab>
     <Tab :isSelected="selected === 'POAs'">
-      <h1>More test text</h1>
+      <div class="d-flex justify-end mb-6">
+        <div>
+          <v-text-field
+            placeholder="Search a poa"
+            style="width: 250px"
+            solo
+          ></v-text-field>
+        </div>
+      </div>
     </Tab>
   </v-container>
 </template>
