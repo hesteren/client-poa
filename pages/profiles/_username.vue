@@ -20,28 +20,28 @@
         </v-row>
       </v-container>
     </v-card>
-    <TabNav
-      :tabs="['About me', 'POAs']"
-      :selected="selected"
-      @selected="setSelected"
-    >
+    <v-card class="overflow-hidden">
+      <v-app-bar>
+        <v-tabs>
+          <v-tab @click="setSelected('About me')">About me</v-tab>
+          <v-tab @click="setSelected('POAs')">POAs</v-tab>
+        </v-tabs>
+      </v-app-bar>
       <Tab :isSelected="selected === 'About me'">
         <p>Some test text</p>
       </Tab>
       <Tab :isSelected="selected === 'POAs'">
         <h1>More test text</h1>
       </Tab>
-    </TabNav>
+    </v-card>
   </v-container>
 </template>
 
 <script>
-import TabNav from "~/components/TabNav.vue";
 import Tab from "~/components/Tab.vue";
 export default {
   name: "profile",
   components: {
-    TabNav,
     Tab,
   },
   methods: {
