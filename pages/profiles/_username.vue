@@ -20,20 +20,22 @@
         </v-row>
       </v-container>
     </v-card>
-    <v-card class="overflow-hidden">
-      <v-app-bar>
-        <v-tabs>
-          <v-tab @click="setSelected('About me')">About me</v-tab>
-          <v-tab @click="setSelected('POAs')">POAs</v-tab>
-        </v-tabs>
-      </v-app-bar>
-      <Tab :isSelected="selected === 'About me'">
-        <p>Some test text</p>
-      </Tab>
-      <Tab :isSelected="selected === 'POAs'">
-        <h1>More test text</h1>
-      </Tab>
-    </v-card>
+    <v-app-bar elevation="0" color="#FFF">
+      <v-tabs>
+        <v-tab @click="setSelected('Profile')"
+          ><v-icon small>mdi-account-box</v-icon>&nbsp;Profile</v-tab
+        >
+        <v-tab @click="setSelected('POAs')"
+          ><v-icon small>mdi-check-decagram</v-icon>&nbsp;POAs</v-tab
+        >
+      </v-tabs>
+    </v-app-bar>
+    <Tab :isSelected="selected === 'Profile'">
+      <p>Some test text</p>
+    </Tab>
+    <Tab :isSelected="selected === 'POAs'">
+      <h1>More test text</h1>
+    </Tab>
   </v-container>
 </template>
 
@@ -51,7 +53,7 @@ export default {
   },
   data: () => ({
     user: Object,
-    selected: "About me",
+    selected: "Profile",
   }),
 
   mounted() {
