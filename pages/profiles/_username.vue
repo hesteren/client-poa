@@ -34,7 +34,7 @@
       <p>Some test text</p>
     </Tab>
     <Tab :isSelected="selected === 'POAs'">
-      <div class="d-flex justify-end mb-6">
+      <div class="d-flex justify-end">
         <div>
           <v-text-field
             placeholder="Search a poa"
