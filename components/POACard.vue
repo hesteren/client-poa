@@ -52,7 +52,7 @@
         <v-divider></v-divider>
 
         <v-card-actions>
-            <v-btn color="primary" text @click="dialog = false">
+            <v-btn class="ml-1" color="primary" text @click="dialog = false">
             Close
             </v-btn>
         </v-card-actions>
