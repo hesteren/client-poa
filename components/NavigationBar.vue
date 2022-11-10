@@ -24,24 +24,24 @@
 
     <v-navigation-drawer
       id="navbar-drawer"
-      absolute
+      fixed
       v-model="drawer"
     >
 
       <div class="primary pa-3" >
-      <router-link to="/" >
-        <v-img src="/logo.png" max-width="120" max-height="70"></v-img>
-      </router-link>
+        <router-link to="/" >
+          <v-img src="/logo.png" max-width="120" max-height="70"></v-img>
+        </router-link>
       </div>
-      <v-list >
-        <v-list-item-group
-          active-class="blue--text text--lighten-3 "
-        >
-          <v-list-item v-for="page in pages" :key="page.id">
-            <v-list-item-title @click="$router.push(page.url)">{{page.name}}</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
+        <v-list >
+          <v-list-item-group
+            active-class="blue--text text--lighten-3 "
+          >
+            <v-list-item v-for="page in pages" :key="page.id">
+              <v-list-item-title @click="$router.push(page.url)">{{page.name}}</v-list-item-title>
+            </v-list-item>
+          </v-list-item-group>
+        </v-list>
 
     </v-navigation-drawer>
   </div>
