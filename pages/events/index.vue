@@ -15,7 +15,7 @@
 
     <v-container>
       <v-row>
-        <v-col cols="6" md="4" v-for="event in filteredEvents" :key="event.id">
+        <v-col sm="6" md="4" v-for="event in filteredEvents" :key="event.id">
           <EventCard class="elevation-1" :event="event"></EventCard>
         </v-col>
       </v-row>
