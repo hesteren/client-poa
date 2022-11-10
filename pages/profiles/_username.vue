@@ -1,6 +1,5 @@
 <template>
   <v-container>
-
     <UserCard :user="this.user"></UserCard>
 
     <v-app-bar elevation="0" color="#FFF">
@@ -20,26 +19,21 @@
       <div class="d-flex justify-end">
         <div class="pr-3">
           <v-text-field
-            placeholder="Search a poa"
+            label="Search a poa"
             style="width: 250px"
             solo
+            v-model="search"
           ></v-text-field>
         </div>
       </div>
-        <v-container>
-          <v-row>
-            <v-col
-              cols="3"
-              md="3"
-              v-for="nft in this.user.nfts"
-              :key="nft.id"
-            >
-              <POACard :nft="nft"></POACard>
-            </v-col>
-          </v-row>
-        </v-container>
+      <v-container>
+        <v-row>
+          <v-col lg="3" md="4" sm="6" v-for="nft in filteredPoas" :key="nft.id">
+            <POACard :nft="nft"></POACard>
+          </v-col>
+        </v-row>
+      </v-container>
     </Tab>
-
   </v-container>
 </template>
 
@@ -55,11 +49,22 @@ export default {
       this.selected = tab;
     },
   },
-  data: () => ({
-    user: Object,
-    selected: "Profile",
-  }),
-
+  data() {
+    return {
+      user: Object,
+      selected: "Profile",
+      search: "",
+    };
+  },
+  computed: {
+    filteredPoas() {
+      return this.$store.state.users.users
+        .find((user) => user.username === this.$route.params.username)
+        .nfts.filter((nft) =>
+          nft.name.toLowerCase().includes(this.search.toLowerCase())
+        );
+    },
+  },
   mounted() {
     this.user = this.$store.state.users.users.find(
       (user) => user.username === this.$route.params.username

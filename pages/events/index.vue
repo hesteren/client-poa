@@ -1,11 +1,10 @@
 <template lang="">
   <v-container>
-
-      <div class="d-flex justify-end">
+    <div class="d-flex justify-end">
       <div>
         <v-text-field
           class="mt-4 mr-3"
-          style="width: 200px"
+          style="width: 250px"
           solo
           v-model="search"
           label="Search an event"
