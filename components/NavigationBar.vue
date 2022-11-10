@@ -35,7 +35,7 @@
       </div>
       <v-list >
         <v-list-item-group
-          active-class="blue--text text--lighten-3"
+          active-class="blue--text text--lighten-3 "
         >
           <v-list-item v-for="page in pages" :key="page.id">
             <v-list-item-title @click="$router.push(page.url)">{{page.name}}</v-list-item-title>

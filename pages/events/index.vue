@@ -1,13 +1,18 @@
 <template lang="">
   <v-container>
-    <v-text-field
-      class="mt-4 ml-3"
-      style="width: 200px"
-      dense
-      v-model="search"
-      label="Search an event"
-    >
-    </v-text-field>
+
+      <div class="d-flex justify-end">
+      <div>
+        <v-text-field
+          class="mt-4 mr-3"
+          style="width: 200px"
+          solo
+          v-model="search"
+          label="Search an event"
+        >
+        </v-text-field>
+      </div>
+    </div>
 
     <v-container>
       <v-row>
