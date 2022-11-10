@@ -18,7 +18,7 @@
     </Tab>
     <Tab :isSelected="selected === 'POAs'">
       <div class="d-flex justify-end">
-        <div>
+        <div class="pr-3">
           <v-text-field
             placeholder="Search a poa"
             style="width: 250px"
@@ -26,6 +26,18 @@
           ></v-text-field>
         </div>
       </div>
+        <v-container>
+          <v-row>
+            <v-col
+              cols="3"
+              md="3"
+              v-for="nft in this.user.nfts"
+              :key="nft.id"
+            >
+              <POACard :nft="nft"></POACard>
+            </v-col>
+          </v-row>
+        </v-container>
     </Tab>
 
   </v-container>

@@ -11,7 +11,7 @@
       <div v-if="$vuetify.breakpoint.width > changePoint">
         <v-btn v-for="page in this.pages" :key="page.id"
                :to="page.url"
-               class="ml-4"
+               class="ml-2"
                color="#fff"
                text >
           {{page.name}}
@@ -57,6 +57,7 @@ export default {
     pages: [
       { id: 1, name: "Home", url: "/" },
       { id: 2, name: "Events", url: "/events" },
+      { id: 3, name: "Profile", url: "/profiles/peter_nobels" },
     ],
   }),
 }
