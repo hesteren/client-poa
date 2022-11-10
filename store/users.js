@@ -13,7 +13,7 @@ export const state = () => ({
         event: 'How to DAO it',
         eventId: 1,
         ownerAddress: '0x1234567890',
-        creationDate: new Date('20-06-2022'),
+        creationDate: '20-06-2022',
       }, {
         id: 2,
         name: 'How to DAO it 2',
@@ -22,7 +22,7 @@ export const state = () => ({
         event: 'How to DAO it 2',
         eventId: 2,
         ownerAddress: '0x1234567890',
-        creationDate: new Date('24-11-2022'),
+        creationDate: '24-11-2022',
       }, {
         id: 3,
         name: 'How to DAO it 3',
@@ -31,7 +31,7 @@ export const state = () => ({
         event: 'How to DAO it 3',
         eventId: 3,
         ownerAddress: '0x1234567890',
-        creationDate: new Date('12-02-2023'),
+        creationDate: '12-02-2023',
       }, {
         id: 4,
         name: 'How to DAO it 4',
@@ -40,7 +40,7 @@ export const state = () => ({
         event: 'How to DAO it 4',
         eventId: 4,
         ownerAddress: '0x1234567890',
-        creationDate: new Date('12-02-2023'),
+        creationDate: '12-02-2023',
       }, {
         id: 5,
         name: 'How to DAO it 5',
@@ -49,7 +49,7 @@ export const state = () => ({
         event: 'How to DAO it 5',
         eventId: 5,
         ownerAddress: '0x1234567890',
-        creationDate: new Date('12-02-2023'),
+        creationDate: '12-02-2023',
       }]
     },
     {
