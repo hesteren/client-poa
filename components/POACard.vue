@@ -14,13 +14,13 @@
     <v-dialog v-model="dialog" width="550">
         <v-card>
         <v-card-title class="text-h5 white--text primary">
-            <v-text class="ml-4">POA view</v-text>
+            <span class="ml-4">POA view</span>
         </v-card-title>
 
         <div class="ml-5 mr-12">
             <v-card-text>
             <v-icon>mdi-folder-text</v-icon>
-            <v-text class="ml-2">Name:</v-text>
+            <span class="ml-2">Name:</span>
             <span class="float-right">{{nft.name}}</span>
             </v-card-text>
         </div>
@@ -28,7 +28,7 @@
         <div class="ml-5 mr-12">
             <v-card-text>
             <v-icon>mdi-clipboard-text-clock</v-icon>
-            <v-text class="ml-2">Issue date:</v-text>
+            <span class="ml-2">Issue date:</span>
             <span class="float-right">{{nft.creationDate}}</span>
             </v-card-text>
         </div>
@@ -36,7 +36,7 @@
         <div class="ml-5 mr-12">
             <v-card-text>
             <v-icon>mdi-image</v-icon>
-            <v-text class="ml-2">Image URL:</v-text>
+            <span class="ml-2">Image URL:</span>
             <a class="float-right" target="_blank" :href="nft.imageUrl">Link to image</a>
             </v-card-text>
         </div>
@@ -44,7 +44,7 @@
         <div class="ml-5 mr-12">
             <v-card-text>
             <v-icon>mdi-calendar</v-icon>
-            <v-text class="ml-2">Event:</v-text>
+            <span class="ml-2">Event:</span>
             <a class="float-right" :href="`/events/${nft.eventId}`">{{nft.event}}</a>
             </v-card-text>
         </div>
