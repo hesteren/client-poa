@@ -31,7 +31,7 @@ export const state = () => ({
     {
       id: 2,
       name: 'Matthias',
-      username: 'Matthias',
+      username: 'matthias',
       about: 'I am a web developer from the Netherlands. I love to code and I love to share my knowledge with others. ',
       nfts: [{
         id: 1,
