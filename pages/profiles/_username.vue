@@ -28,7 +28,7 @@
       </div>
       <v-container>
         <v-row>
-          <v-col cols="3" md="3" v-for="nft in filteredPoas" :key="nft.id">
+          <v-col lg="3" md="4" sm="6" v-for="nft in filteredPoas" :key="nft.id">
             <POACard :nft="nft"></POACard>
           </v-col>
         </v-row>
