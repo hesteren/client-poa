@@ -14,7 +14,7 @@
             <v-row class="justify-end">
               <v-col>
                 <h3 style="color: #1976d2; margin-left: 3px">
-                  Create a new event
+                  Create event
                 </h3>
               </v-col>
               <v-col class="text-right">
@@ -87,7 +87,7 @@
             </v-card>
 
             <v-card v-if="step == 2" elevation="0" id="card-4" class="card">
-              <v-container class="inside-card-scroll">
+              <v-container class="inside-card-scroll pl-0">
               <v-card-title>Image</v-card-title>
               <v-card-text>
                 Add an image to your event to lure people in! If no image is
@@ -104,8 +104,7 @@
                   append-icon="mdi-camera"
                   label="Upload an image"
                   required
-                  class="mr-1"
-                  style="margin-top: 70px"
+                  style="margin-top: 30px"
                 >
                 </v-file-input>
               </v-col>
@@ -139,7 +138,7 @@
 
                   <v-col cols="12" sm="4">
                     <v-text-field
-                      class="mr-1"
+                      class="mr-1 ml-1"
                       type="time"
                       v-model="event.startTime"
                       label="Start time"
@@ -158,7 +157,7 @@
 
                   <v-col cols="12" sm="4">
                     <v-text-field
-                      class="mr-1"
+                      class="mr-1 ml-1"
                       type="time"
                       v-model="event.endTime"
                       label="End time"
@@ -180,7 +179,7 @@
                   class="ml-1 mr-1"
                   dense
                   v-model="event.location"
-                  label="Location"
+                  label="Location*"
                   :rules="locationRules"
                   maxlength="50"
                   counter="50"
@@ -237,7 +236,7 @@
                     ></v-text-field>
                   </v-col>
 
-                  <v-col cols="12" sm="5">
+                  <v-col cols="12" sm="5" class="ml-1">
                     <v-text-field
                       v-model="data.value"
                       label="Value"
@@ -254,14 +253,14 @@
                       color="red"
                       @click="removeCustomData(data.id)"
                     >
-                      <v-icon>mdi-window-close</v-icon>
+                      <v-icon>mdi-delete</v-icon>
                     </v-btn>
                   </v-col>
                 </v-row>
 
                 <v-btn
                   v-if="customDataCount <= 10"
-                  class="ml-1"
+                  class="ml-1 mt-2"
                   fab
                   small
                   color="primary"
@@ -338,7 +337,7 @@
 
             <v-card-actions>
               <v-btn class="ml-2 mb-2" v-if="step != 1" @click="previousStep"
-                ><v-icon>mdi-arrow-left-thin</v-icon></v-btn
+                ><v-icon>mdi-arrow-left-thin</v-icon>Previous</v-btn
               >
               <v-spacer></v-spacer>
               <v-btn
@@ -346,7 +345,7 @@
                 color="primary"
                 v-if="step != steps"
                 @click="nextStep"
-                ><v-icon> mdi-arrow-right-thin </v-icon></v-btn
+                >Next<v-icon> mdi-arrow-right-thin </v-icon></v-btn
               >
 
               <div class="text-center" v-if="step == steps">
